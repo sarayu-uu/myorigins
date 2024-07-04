@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MyOrigins.ai</title>
+  <link rel="stylesheet" href="aboutus.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="contactus.css">
+
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-M4QQ...XrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="myoriginslogo.png" alt="Logo">
+        <span class="site-name">MyOrigins</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT</a></li>
+          <li><a href="contactus.html">CONTACT</a></li>
+          <li><a href="#family-tree">BUILD A FAMILY TREE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="parallax">
+    <div class="parallax-content">
+      <h1>Welcome to MyOrigins</h1>
+      <p>where the tapestry of your ancestry unfolds through the lens of artificial intelligence. At MyOrigins.ai, we are passionate about connecting you to your roots, uncovering the stories that define who you are today.</p>
+    </div>
+  </section>
+
+  <div class="button-container">
+    <button id="mission-button" class="overlay-button">Our Mission</button>
+    <button id="initiative-button" class="overlay-button">Our Initiative</button>
+    <button id="assurance-button" class="overlay-button">Our Assurance</button>
+  </div>
+
+  <section id="our-mission" class="mission-section">
+    <div class="mission-container">
+      <div class="mission-image"></div>
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>Our mission is simple yet profound: to empower individuals and families to discover and celebrate their heritage. Through cutting-edge AI technology and a commitment to accuracy, we offer a transformative experience that transcends borders and generations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="video-container">
+      <video autoplay muted loop id="background-video">
+        <source src="7.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay">
+        <p>Our AI-driven platform offers personalized ancestry insights, fostering profound connections to one's roots. By preserving and sharing diverse heritage stories, we aim to deepen global cultural appreciation and understanding.</p>
+      </div>
+    </div>
+  </section>
+
+  
+<!-- Our Initiative Section -->
+<!-- Our Initiative Section -->
+<section id="our-initiative" class="initiative-section">
+    <div class="initiative-container">
+      <div class="initiative-text">
+        <h2>Our Initiative</h2>
+        <p>Using advanced algorithms and vast genealogical databases, MyOrigins.ai traces your lineage with unparalleled precision. Whether you're curious about distant ancestors or seeking to validate family lore, our platform provides insights that enrich your understanding of your past.
+
+        </p>
+      </div>
+      <div class="initiative-image">
+        <img src="8.png" alt="Initiative Image">
+      </div>
+    </div>
+  </section>
+  
+  <div class="card">
+    <div class="image-box">
+      <img src="4.png">
+    </div>
+    <div class="content">
+      <h2>Unearth Your Ancestry with MyOrigins</h2>
+      <p>Leveraging advanced algorithms and comprehensive genealogical records, we map your family history with exceptional precision. Explore your ancestral roots and confirm family stories to gain a richer perspective on your heritage.</p>
+    </div>
+  </div>
+
+
+  <!--assurance section-->
+  <section id="section-heading">
+    <h2 class="section-title">Our Assurance</h2>
+  </section>
+
+
+  <section id="our-assurance" class="assurance-section">
+        <div class="container">
+            <div class="section-cards">
+                <div class="section-card">
+                    <span>1</span>
+                    <h2>AI-Powered Accuracy</h2>
+                    <p> Our proprietary AI algorithms ensure reliable results, backed by comprehensive data analysis.
+                    </p>
+                </div>
+                <div class="section-card">
+                    <span>2</span>
+                    <h2>User-Centric Approach</h2>
+                    <p>We prioritize your experience, offering intuitive tools and personalized support every step of the way.</p>
+                </div>
+                <div class="section-card">
+                    <span>3</span>
+                    <h2>Ethical Standards</h2>
+                    <p>We uphold the highest standards of data privacy and security, respecting the sensitivity of your familial history. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">
+          <img src="myoriginslogo.png" alt="MyOrigins Logo">
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2024 MYORIGINS.AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // JavaScript for shrinking header on scroll
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      var logo = document.querySelector(".logo img");
+      var navLinks = document.querySelectorAll("nav ul li");
+
+      if (window.scrollY > 0) {
+        header.classList.add("header-shrink");
+        logo.style.height = "50px"; // Adjust height of logo when scrolling
+        navLinks.forEach(function(link) {
+          link.style.marginRight = "10px"; // Adjust margin of nav links when scrolling
+        });
+      } else {
+        header.classList.remove("header-shrink");
+        logo.style.height = "60px"; // Reset logo height
+        navLinks.forEach(function(link) {
+          link.style.marginRight = "20px"; // Reset nav links margin
+        });
+      }
+    });
+
+    // Smooth scroll to sections
+    document.addEventListener('DOMContentLoaded', function() {
+        const missionButton = document.getElementById('mission-button');
+        const initiativeButton = document.getElementById('initiative-button');
+        const assuranceButton = document.getElementById('assurance-button');
+        const missionSection = document.getElementById('our-mission');
+        const initiativeSection = document.getElementById('our-initiative');
+        const assuranceSection = document.getElementById('our-assurance');
+      
+        missionButton.addEventListener('click', function() {
+          missionSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      
+        initiativeButton.addEventListener('click', function() {
+          initiativeSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      
+        assuranceButton.addEventListener('click', function() {
+          assuranceSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      
+        const observerMission = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              missionSection.classList.add('in-view');
+              observerMission.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        const observerInitiative = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              initiativeSection.classList.add('in-view');
+              observerInitiative.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        const observerAssurance = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              assuranceSection.classList.add('in-view');
+              observerAssurance.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+      
+        observerMission.observe(missionSection);
+        observerInitiative.observe(initiativeSection);
+        observerAssurance.observe(assuranceSection);
+      });
+
+    // JavaScript for social links hover effect
+    const socialLinks = document.querySelectorAll(".social-links a");
+
+    socialLinks.forEach(link => {
+      link.addEventListener("mouseenter", function() {
+        this.style.transform = "scale(1.2)";
+      });
+
+      link.addEventListener("mouseleave", function() {
+        this.style.transform = "scale(1)";
+      });
+    });
+  </script>
+</body>
+</html>
