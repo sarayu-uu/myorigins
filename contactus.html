@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MyOrigins.ai</title>
+  <link rel="stylesheet" href="aboutus.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="contactus.css">
+  
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-M4QQ...XrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+  <script src="app.js"></script>
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="myoriginslogo.png" alt="Logo">
+        <span class="site-name">MyOrigins</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT</a></li>
+          <li><a href="contactus.html">CONTACT</a></li>
+          <li><a href="#family-tree">BUILD A FAMILY TREE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="background-image-section"></section>
+
+  
+<section class="contact-section">
+    <div class="contact-info">
+        <h2>Give Us Your Information</h2>
+        <div class="contact-details">
+            <div class="contact-box two-in-row">
+                <input type="text" id="name" name="name" required placeholder="Name">
+            </div>
+            <div class="contact-box two-in-row">
+                <input type="tel" id="number" name="number" required placeholder="Number">
+            </div>
+            <div class="contact-box">
+                <input type="email" id="email" name="email" required placeholder="Email">
+            </div>
+            <div class="contact-box">
+                <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
+            </div>
+            <div class="submit-button">
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </div>
+    <div class="additional-info">
+        <h2>Send Us A Message</h2>
+        <p>Whether you have questions, feedback, or specific inquiries, our dedicated team is here to help. We value your thoughts and strive to provide the best possible support.</p>
+    </div>
+</section>
+
+
+<section class="info-section">
+    <div class="info-box">
+        <img src="10.png" alt="Phone Icon" class="info-icon">
+        <h3>80083 72727</h3>
+        <p>Reach us out by this number</p>
+    </div>
+    <div class="info-box">
+        <img src="11.png" alt="Email Icon" class="info-icon">
+        <h3>sarasindia.com</h3>
+        <p>Email us your queries here.</p>
+    </div>
+    <div class="info-box">
+        <img src="12.png" alt="Location Icon" class="info-icon">
+        <h3>Location</h3>
+        <p>CBR MONTE CARLO, KONDAPUR, HYDERABAD, TELANGANA, 500084</p>
+        <a href="https://maps.app.goo.gl/HEC172NFtzZNFT397" id="map-link">View on Map</a>
+    </div>
+    <div id="map" class="map"></div>
+</section>
+
+
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">
+          <img src="myoriginslogo.png" alt="MyOrigins Logo">
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2024 MYORIGINS.AI. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="app.js"></script>
+ 
+  <script>
+    
+
+//1st section
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('.contact-box input, .contact-box textarea');
+
+    // Add event listeners for focus and blur
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            // When input is focused, hide its label
+            this.previousElementSibling.style.display = 'none';
+        });
+
+        input.addEventListener('blur', function() {
+            // When input is blurred and empty, show its label again
+            if (this.value === '') {
+                this.previousElementSibling.style.display = 'block';
+            }
+        });
+
+        // Check initial state (if input fields are pre-filled)
+        if (input.value !== '') {
+            input.previousElementSibling.style.display = 'none';
+        }
+    });
+});
+
+//maps 
+
+// Initialize Google Map
+function initMap() {
+    // Replace with your location coordinates
+    var location = { lat: 37.7749, lng: -122.4194 }; // Example: San Francisco, CA
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 15,
+        center: location
+    });
+
+    // Marker
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: 'Your Location'
+    });
+
+    // Map Link Behavior
+    document.getElementById('map-link').addEventListener('click', function(event) {
+        event.preventDefault();
+        window.open('https://maps.google.com?q=' + location.lat + ',' + location.lng);
+    });
+}
+
+
+  </script>
+</body>
+</html>

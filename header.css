@@ -1,0 +1,65 @@
+/* Header Styles */
+header {
+  background-color: rgb(255, 255, 255); /* Semi-transparent black background */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease, height 0.3s ease;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  transition: padding 0.3s ease; /* Transition padding for smooth effect */
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.logo img {
+  height: 80px; /* Adjust height as needed */
+  transition: height 0.3s ease; /* Transition height for smooth effect */
+}
+
+.site-name {
+  color: rgb(0, 0, 0); /* Color of the site name */
+  font-size: 1.5em; /* Adjust font size as needed */
+  margin-left: 0px; /* Adjust spacing between logo and site name */
+  font-family:'Times New Roman', Times, serif;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  display: flex;
+  font-size: 15px;
+  transition: margin-right 0.3s ease; /* Transition margin for smooth effect */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+}
+
+nav ul li {
+  margin-right: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #aec669; /* Change color to your desired color */
+  opacity: 1;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 2); /* Add text shadow */
+}

@@ -1,0 +1,209 @@
+
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    background-color: #ffffff; /* Background color for the entire website */
+  }
+
+  .background-image-section {
+    background-image: url('13.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Adjust height as needed */
+  }
+
+/* Contact section styles */
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.contact-info {
+    width: 75%; /* Adjusted to cover 75% of the .contact-section */
+    padding: 20px;
+
+    background-color: #ffffff;
+}
+.contact-info h2 {
+    margin-top: 0;
+    color: #aec762;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 5, 5); /* Add text shadow */
+}
+
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 15px; /* Gap between contact boxes */
+}
+
+.contact-box {
+    position: relative;
+    width: 100%; /* Ensures boxes fill the parent container */
+    margin-bottom: 15px;
+}
+
+.contact-box input,
+.contact-box textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1rem;
+}
+
+.contact-box textarea {
+    resize: vertical;
+}
+
+.contact-box input::placeholder,
+.contact-box textarea::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #375107;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.contact-box input:focus::placeholder,
+.contact-box textarea:focus::placeholder,
+.contact-box input:not(:placeholder-shown)::placeholder,
+.contact-box textarea:not(:placeholder-shown)::placeholder {
+    font-size: 0.8rem;
+    top: 0;
+    transform: translateY(0);
+    color: #1e4e65;
+}
+
+.submit-button {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Align button to the right */
+    margin-top: 15px; /* Adjust spacing from contact boxes */
+}
+
+.submit-button button {
+    padding: 10px 20px;
+    background-color: #6b8b41;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button button:hover {
+    background-color: #72991d;
+}
+/* Adjust two boxes in a row */
+.two-in-row {
+    width: calc(50% - 7.5px);
+    display: inline-block;
+}
+
+.additional-info {
+    width: 25%;
+    padding: 20px;
+background-color: #aec762;    
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.additional-info h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #261f0f; /* Set text color to contrast with background */
+}
+
+.additional-info p {
+    font-size: 1.1rem;
+    line-height: 2;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000; /* Set text color to contrast with background */
+}
+
+
+/*info section*/
+
+.info-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+    padding-top: 60px;
+    background-color: #ffffff;
+}
+
+.info-box {
+    width: calc(33.33% - 20px);
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5); /* Enhanced shadow */
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative; /* Positioning for icon */
+}
+
+.info-box:hover {
+    transform: translateY(-5px); /* Add a subtle hover effect */
+}
+
+.info-icon {
+    width: 100px; /* Adjusted icon width */
+    height: 60px; /* Adjusted icon height */
+    border-radius: 50%; /* Make the icon circular */
+    margin-bottom: 10px; /* Space between icon and heading */
+}
+
+.info-box h3 {
+    margin-top: 0;
+    font-size: 1.8rem; /* Increased font size */
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.info-box p {
+    color: #666;
+    font-size: 1.1rem; /* Increased font size */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.map {
+    width: 100%;
+    height: 300px; /* Adjusted height for better visibility */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right:20px ;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 1); /* Enhanced shadow */
+    transition: transform 0.3s ease;
+}
+
+.map:hover {
+    transform: scale(1.02); /* Add a slight scale effect on hover */
+}
+
+
+
+

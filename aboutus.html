@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - MyOrigins.ai</title>
+  <link rel="stylesheet" href="aboutus.css"> <!-- Link to your CSS file -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="contactus.css">
+
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-M4QQ...XrA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="myoriginslogo.png" alt="Logo">
+        <span class="site-name">MyOrigins</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="aboutus.html">ABOUT</a></li>
+          <li><a href="contactus.html">CONTACT</a></li>
+          <li><a href="#family-tree">BUILD A FAMILY TREE</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="parallax">
+    <div class="parallax-content">
+      <h1>Welcome to MyOrigins</h1>
+      <p>where the tapestry of your ancestry unfolds through the lens of artificial intelligence. At MyOrigins.ai, we are passionate about connecting you to your roots, uncovering the stories that define who you are today.</p>
+    </div>
+  </section>
+
+  
+
+  <section class="vision-section">
+    <div class="vision-container">
+      <div class="vision-image animate-left">
+        <img src="5.png" alt="Example Image">
+      </div>
+      <div class="vision-content animate-right">
+        <h2>Our Vision</h2>
+        <p>Our vision is to create a world where every individual can easily connect with their roots and preserve their heritage for future generations. We aim to use innovative technology to bring history to life and make personal stories accessible and engaging.</p>
+      </div>
+    </div>
+  </section>
+  
+  
+  
+  
+
+  
+
+  
+<!-- Our Initiative Section -->
+<section class="initiative-section">
+  <div class="initiative-container">
+      <div class="initiative-content">
+          <h2>Our Initiative</h2>
+          <p>Using advanced algorithms and vast genealogical databases, MyOrigins.ai traces your lineage with unparalleled precision. Whether you're curious about distant ancestors or seeking to validate family lore, our platform provides insights that enrich your understanding of your past.</p>
+      </div>
+      <div class="initiative-image">
+          <img src="8.png" alt="Example Image">
+      </div>
+  </div>
+</section>
+
+  
+  
+
+
+  <!--assurance section-->
+  <section id="section-heading">
+    <h2 class="section-title">Our Assurance</h2>
+  </section>
+
+
+  <section id="our-assurance" class="assurance-section">
+    <div class="container">
+      <div class="section-cards">
+        <div class="section-card">
+          <span><i class="fas fa-chart-line"></i></span>
+          <h2>AI-Powered Accuracy</h2>
+          <p> Our proprietary AI algorithms ensure reliable results, backed by comprehensive data analysis.
+          </p>
+        </div>
+        <div class="section-card">
+          <span><i class="fas fa-users"></i></span>
+          <h2>User-Centric Approach</h2>
+          <p>We prioritize your experience, offering intuitive tools and personalized support every step of the way.</p>
+        </div>
+        <div class="section-card">
+          <span><i class="fas fa-shield-alt"></i></span>
+          <h2>Ethical Standards</h2>
+          <p>We uphold the highest standards of data privacy and security, respecting the sensitivity of your familial history.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="logo">
+          <img src="myoriginslogo.png" alt="MyOrigins Logo">
+        </div>
+        <div class="social-links">
+          <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <p class="footer-text">&copy; 2024 MYORIGINS.AI. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // shit for the vision stuff
+    
+    
+      document.addEventListener('DOMContentLoaded', function() {
+        const visionSection = document.querySelector('.vision-section');
+        const options = {
+          root: null, // Use the viewport as the root
+          rootMargin: '0px',
+          threshold: 0.1 // Trigger when 10% of the section is visible
+        };
+      
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target); // Stop observing once the section is in view
+            }
+          });
+        }, options);
+      
+        observer.observe(visionSection);
+      });
+      
+      
+      // end
+      
+//intiative shit
+document.addEventListener('DOMContentLoaded', function() {
+  const sections = document.querySelectorAll('.initiative-section');
+
+  function checkIfInView() {
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        section.classList.add('is-in-view');
+      } else {
+        section.classList.remove('is-in-view');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkIfInView);
+  window.addEventListener('resize', checkIfInView);
+  checkIfInView(); // Initial check
+});
+
+//end
+    
+
+    // JavaScript for social links hover effect
+    const socialLinks = document.querySelectorAll(".social-links a");
+
+    socialLinks.forEach(link => {
+      link.addEventListener("mouseenter", function() {
+        this.style.transform = "scale(1.2)";
+      });
+
+      link.addEventListener("mouseleave", function() {
+        this.style.transform = "scale(1)";
+      });
+    });
+  </script>
+</body>
+</html>
